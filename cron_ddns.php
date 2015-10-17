@@ -36,7 +36,7 @@ function get_real_ip($url){
 $field = array('auth_login'=>$auth_login,'auth_token'=>$auth_token,'format'=>"xml",'class'=>"dns_record",'method'=>"info",'domain'=>$domain);
 $info = ukr_response($field);
 // Получаем реальний айпишник нашего сервера. Если ненужно просто установите новый IP в переменную $real_ip.
-$real_ip = get_real_ip('http://curlmyip.com');
+$real_ip = get_real_ip('http://ipecho.net/plain');
 
 // Перебираем все записи, ищем наш поддомен
 foreach($info['data'] as $key => $value){
